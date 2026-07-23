@@ -1,0 +1,16 @@
+# Sistema Windows
+Thumbs.db
+Desktop.ini
+
+# Sistema macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Arquivos de log
+*.log
+
+# Variáveis de ambiente (caso use no futuro)
+.env
+.env.*
