@@ -45,3 +45,13 @@
     color: white;
 
 }
+
+.button-group {
+
+    display: flex;
+
+    gap: var(--spacing-md);
+
+    flex-wrap: wrap;
+    
+}
