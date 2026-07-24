@@ -8,21 +8,15 @@ Transmitir elegância, delicadeza e sofisticação, valorizando o caráter artes
 
 # Paleta de Cores
 
-## Primária
-
-> Definir posteriormente.
-
-## Secundária
-
-> Definir posteriormente.
-
-## Destaque
-
-> Definir posteriormente.
-
-## Fundo
-
-> Definir posteriormente.
+| Elemento | Cor |
+|----------|-----|
+| Fundo Principal | #FFFFFF |
+| Fundo Secundário | #F8F8F8 |
+| Cor Primária | #E8B4C7 |
+| Cor de Destaque | #D88DA8 |
+| Texto Principal | #2E2E2E |
+| Texto Secundário | #6B6B6B |
+| Bordas | #E5E5E5 |
 
 ---
 
@@ -30,11 +24,15 @@ Transmitir elegância, delicadeza e sofisticação, valorizando o caráter artes
 
 ## Títulos
 
-Fonte elegante.
+Fonte serifada que transmita sofisticação.
+
+- Playfair Display
 
 ## Texto
 
 Fonte simples e legível.
+
+- Poppins
 
 ---
 
