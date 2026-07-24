@@ -1,0 +1,43 @@
+:root {
+
+    /* Cores */
+
+    --color-primary: #E8B4C7;
+    --color-primary-dark: #D88DA8;
+
+    --color-background: #FFFFFF;
+    --color-background-light: #F8F8F8;
+
+    --color-text: #2E2E2E;
+    --color-text-light: #6B6B6B;
+
+    --color-border: #E5E5E5;
+
+    /* Fontes */
+
+    --font-title: "Playfair Display", serif;
+    --font-text: "Poppins", sans-serif;
+
+    /* Espaçamentos */
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 96px;
+
+    /* Bordas */
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* Sombras */
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .08);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, .08);
+
+}
