@@ -4,6 +4,12 @@ html {
 
 }
 
+section {
+
+    scroll-margin-top: var(--header-height);
+
+}
+
 body {
 
     background: var(--color-background);
