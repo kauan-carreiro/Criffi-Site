@@ -11,12 +11,12 @@
 
 ## Fase 2 - HTML
 
-- [ ] Header
-- [ ] Hero
-- [ ] Sobre
-- [ ] Produtos
-- [ ] Categorias
-- [ ] Footer
+- [x] Header
+- [x] Hero
+- [x] Sobre
+- [x] Produtos
+- [x] Categorias
+- [x] Footer
 
 ---
 
