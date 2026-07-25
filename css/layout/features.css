@@ -1,0 +1,63 @@
+#diferenciais {
+
+    padding: var(--spacing-4xl) 0;
+
+}
+
+.features-heading {
+
+    max-width: 680px;
+
+    margin-bottom: var(--spacing-2xl);
+
+}
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: var(--spacing-lg);
+
+}
+
+.features-grid article {
+
+    padding: var(--spacing-xl);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-background);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: transform .3s ease, box-shadow .3s ease;
+
+}
+
+.features-grid article:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+.features-grid h3 {
+
+    margin-bottom: var(--spacing-sm);
+
+}
+
+@media (max-width: 820px) {
+
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
