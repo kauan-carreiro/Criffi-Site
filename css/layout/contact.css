@@ -1,0 +1,41 @@
+#contato {
+
+    padding: var(--spacing-4xl) 0;
+
+    background: linear-gradient(135deg, rgba(232, 180, 199, .22), rgba(248, 248, 248, 1));
+
+    text-align: center;
+
+}
+
+#contato .container {
+
+    max-width: 760px;
+
+}
+
+#contato h2 {
+
+    margin-bottom: var(--spacing-md);
+
+}
+
+#contato p {
+
+    margin: 0 auto var(--spacing-xl);
+
+    max-width: 620px;
+
+    font-size: 1.05rem;
+
+}
+
+@media (max-width: 520px) {
+
+    #contato .button {
+
+        width: 100%;
+
+    }
+
+}
