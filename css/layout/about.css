@@ -34,6 +34,8 @@
 
     border-radius: var(--radius-lg);
 
+    box-shadow: var(--shadow-sm);
+
 }
 
 .about-content {
@@ -61,5 +63,36 @@
     max-width: 500px;
 
     margin-bottom: var(--spacing-xl);
+
+}
+
+@media (max-width: 900px) {
+
+    #sobre .container {
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: var(--spacing-2xl);
+
+    }
+
+    .about-content,
+    .about-image {
+
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .about-content .button {
+
+        width: 100%;
+
+    }
 
 }
