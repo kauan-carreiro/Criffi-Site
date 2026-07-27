@@ -4,424 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Criffi | Moda em Crochê Artesanal</title>
-
     <meta name="description"
         content="Conheça a Criffi, loja especializada em roupas de crochê artesanal. Peças únicas, feitas à mão com qualidade, elegância e exclusividade.">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
-            
-        <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
     <header>
-
         <div class="container">
+            <a href="#hero" class="logo" aria-label="Criffi - Início">Criffi</a>
 
-            <a href="#hero" class="logo">
-                Criffi
-            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <nav>
-
+            <nav id="primary-navigation" class="site-nav">
                 <ul>
-
-                    <li>
-                        <a href="#hero">Início</a>
-                    </li>
-
-                    <li>
-                        <a href="#sobre">Sobre</a>
-                    </li>
-
-                    <li>
-                        <a href="#produtos">Produtos</a>
-                    </li>
-
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
-
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
-
             </nav>
 
-            <a href="#" class="button button-primary">
-
+            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20conhecer%20as%20peças%20da%20Criffi."
+                class="button button-primary header-contact" target="_blank" rel="noopener">
                 WhatsApp
-
             </a>
-
         </div>
-
     </header>
 
     <main>
-
-        <section id="hero">
-
+        <section id="hero" class="reveal">
             <div class="container">
-
                 <div class="hero-content">
-
-                    <span class="hero-category">
-
-                        Moda em Crochê Artesanal
-
-                    </span>
-
-                    <h1>
-
-                        Peças feitas à mão para valorizar o seu estilo.
-
-                    </h1>
-
+                    <span class="hero-category">Moda em Crochê Artesanal</span>
+                    <h1>Peças feitas à mão para valorizar o seu estilo.</h1>
                     <p>
-
-                        A Criffi une delicadeza, conforto e exclusividade em
-                        roupas produzidas artesanalmente para mulheres que
-                        valorizam qualidade e autenticidade.
-
+                        A Criffi une delicadeza, conforto e exclusividade em roupas produzidas artesanalmente
+                        para mulheres que valorizam qualidade e autenticidade.
                     </p>
-
                     <div class="button-group hero-actions">
-
-                        <a href="#produtos" class="button button-primary">
-
-                            Ver Coleção
-
-                        </a>
-
-                        <a href="#contato" class="button button-secondary">
-
-                            Fale Conosco
-
-                        </a>
-
+                        <a href="#produtos" class="button button-primary">Ver Coleção</a>
+                        <a href="#contato" class="button button-secondary">Fale Conosco</a>
                     </div>
-
                 </div>
 
                 <div class="hero-image">
-
-                    <img src="./assets/images/hero/hero-image.webp" alt="Modelo utilizando uma peça de crochê da Criffi">
-
+                    <img src="./assets/images/hero/hero-image.webp"
+                        alt="Modelo utilizando uma peça de crochê da Criffi">
                 </div>
-
             </div>
-
         </section>
 
-        <section id="sobre">
-
+        <section id="sobre" class="reveal">
             <div class="container">
-
                 <div class="about-image">
-
                     <img src="./assets/images/about/about.webp" alt="Produção artesanal da Criffi">
-
                 </div>
 
                 <div class="about-content">
-
-                    <span class="section-subtitle">
-
-                        Nossa História
-
-                    </span>
-
-                    <h2>
-
-                        Mais do que roupas,
-                        criamos peças com identidade.
-
-                    </h2>
-
+                    <span class="section-subtitle">Nossa História</span>
+                    <h2>Mais do que roupas, criamos peças com identidade.</h2>
                     <p>
-
-                        A Criffi nasceu do amor pelo crochê artesanal e da
-                        vontade de oferecer peças únicas, produzidas com
-                        dedicação, criatividade e atenção aos detalhes.
-
+                        A Criffi nasceu do amor pelo crochê artesanal e da vontade de oferecer peças únicas,
+                        produzidas com dedicação, criatividade e atenção aos detalhes.
                     </p>
-
-                    <a href="#produtos" class="button button-primary">
-
-                        Conheça a coleção
-
-                    </a>
-
+                    <a href="#produtos" class="button button-primary">Conheça a coleção</a>
                 </div>
-
             </div>
-
         </section>
 
-        <section id="produtos">
-
+        <section id="produtos" class="reveal">
             <div class="container">
-
-                <span class="section-subtitle">
-
-                    Catálogo
-
-                </span>
-
-                <h2>
-
-                    Nossos Produtos
-
-                </h2>
-
-                <div class="product-filters">
-
-                    <button class="filter-button active">
-
-                        Todos
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Blusas
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Croppeds
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Biquínis
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Saias
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Vestidos
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Conjuntos
-
-                    </button>
-
-                    <button class="filter-button">
-
-                        Acessórios
-
-                    </button>
-
+                <div class="products-header">
+                    <span class="section-subtitle">Catálogo Criffi</span>
+                    <h2>Moda em crochê artesanal</h2>
                 </div>
 
-                <div class="products-grid">
+                <div class="product-toolbar" aria-label="Filtros do catálogo">
+                    <div class="product-filters">
+                        <button class="filter-button active" type="button" data-filter="todos">Todos</button>
+                        <button class="filter-button" type="button" data-filter="blusas">Blusas</button>
+                        <button class="filter-button" type="button" data-filter="croppeds">Croppeds</button>
+                        <button class="filter-button" type="button" data-filter="biquinis">Biquínis</button>
+                        <button class="filter-button" type="button" data-filter="saias">Saias</button>
+                        <button class="filter-button" type="button" data-filter="vestidos">Vestidos</button>
+                        <button class="filter-button" type="button" data-filter="conjuntos">Conjuntos</button>
+                        <button class="filter-button" type="button" data-filter="acessorios">Acessórios</button>
+                    </div>
 
-                    <article class="product-card">
-
-                        <img src="./assets/images/products/product-1.jpg" alt="Produto">
-
-                        <h3>
-
-                            Nome do Produto
-
-                        </h3>
-
-                        <p>
-
-                            R$ 199,90
-
-                        </p>
-
-                        <a href="#" class="button button-primary">
-
-                            Ver Produto
-
-                        </a>
-
-                    </article>
-
-                    <!-- Outros cards serão adicionados futuramente -->
-
+                    <label class="products-search">
+                        <span>Buscar produto</span>
+                        <input type="search" id="product-search" placeholder="Buscar peça">
+                    </label>
                 </div>
 
+                <div class="products-resultsbar">
+                    <p id="products-count"></p>
+                    <label class="products-sort">
+                        <span>Ordenar por</span>
+                        <select id="product-sort">
+                            <option value="suggested">Sugerido</option>
+                            <option value="name-asc">Nome A-Z</option>
+                            <option value="price-desc">Maior preço</option>
+                            <option value="price-asc">Menor preço</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="products-grid" id="products-grid" aria-live="polite"></div>
+
+                <div class="products-empty" id="products-empty" hidden>
+                    Nenhum produto encontrado para essa busca.
+                </div>
+
+                <div class="products-pagination" id="products-pagination" aria-label="Paginação de produtos"></div>
             </div>
-
         </section>
 
-        <section id="diferenciais">
-
+        <section id="diferenciais" class="reveal">
             <div class="container">
-
-                <span class="section-subtitle">
-
-                    Por que escolher a Criffi?
-
-                </span>
-
-                <h2>
-
-                    Qualidade em cada detalhe.
-
-                </h2>
+                <div class="features-heading">
+                    <span class="section-subtitle">Por que escolher a Criffi?</span>
+                    <h2>Qualidade em cada detalhe.</h2>
+                </div>
 
                 <div class="features-grid">
-
                     <article>
-
-                        <h3>
-
-                            Produção Artesanal
-
-                        </h3>
-
-                        <p>
-
-                            Cada peça é confeccionada manualmente e sob medida.
-
-                        </p>
-
+                        <h3>Produção Artesanal</h3>
+                        <p>Cada peça é confeccionada manualmente e pode receber ajustes sob medida.</p>
                     </article>
-
                     <article>
-
-                        <h3>
-
-                            Exclusividade
-
-                        </h3>
-
-                        <p>
-
-                            Modelos únicos para valorizar seu estilo.
-
-                        </p>
-
+                        <h3>Exclusividade</h3>
+                        <p>Modelos pensados em pequenas coleções, com personalidade e acabamento próprio.</p>
                     </article>
-
                     <article>
-
-                        <h3>
-
-                            Qualidade
-
-                        </h3>
-
-                        <p>
-
-                            Materiais selecionados e acabamento cuidadoso.
-
-                        </p>
-
+                        <h3>Qualidade</h3>
+                        <p>Materiais selecionados, caimento confortável e atenção real aos detalhes.</p>
                     </article>
-
                 </div>
-
             </div>
-
         </section>
 
-        <section id="contato">
-
+        <section id="contato" class="reveal">
             <div class="container">
-
-                <span class="section-subtitle">
-
-                    Contato
-
-                </span>
-
-                <h2>
-
-                    Vamos conversar?
-
-                </h2>
-
+                <span class="section-subtitle">Contato</span>
+                <h2>Vamos conversar?</h2>
                 <p>
-
-                    Tire suas dúvidas, solicite informações ou faça seu pedido
-                    diretamente pelo WhatsApp.
-
+                    Tire suas dúvidas, solicite informações ou faça seu pedido diretamente pelo WhatsApp.
                 </p>
-
-                <a href="#" class="button button-primary">
-
+                <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."
+                    class="button button-primary" target="_blank" rel="noopener">
                     Conversar no WhatsApp
-
                 </a>
-
             </div>
-
         </section>
-
     </main>
 
     <footer>
-
         <div class="container">
-
-            <h2>
-
-                Criffi
-
-            </h2>
-
-            <p>
-
-                Moda em Crochê Artesanal.
-
-            </p>
-
+            <h2>Criffi</h2>
+            <p>Moda em Crochê Artesanal.</p>
             <nav>
-
                 <ul>
-
                     <li><a href="#hero">Início</a></li>
-
                     <li><a href="#sobre">Sobre</a></li>
-
                     <li><a href="#produtos">Produtos</a></li>
-
                     <li><a href="#contato">Contato</a></li>
-
                 </ul>
-
             </nav>
-
-            <small>
-
-                © 2026 Criffi. Todos os direitos reservados.
-
-            </small>
-
+            <small>© 2026 Criffi. Todos os direitos reservados.</small>
         </div>
-
     </footer>
 
-    <!-- JavaScript -->
+    <dialog class="product-modal" id="product-modal" aria-labelledby="product-modal-title">
+        <button class="modal-close" type="button" aria-label="Fechar detalhes">×</button>
+        <div class="product-modal__gallery" id="product-modal-gallery" aria-label="Galeria do produto">
+            <div class="product-modal__thumbs" id="product-modal-thumbs"></div>
+        </div>
+        <aside class="product-modal__content">
+            <span id="product-modal-category" class="product-modal__category"></span>
+            <h2 id="product-modal-title"></h2>
+            <strong id="product-modal-price" class="product-modal__price"></strong>
+            <p id="product-modal-summary"></p>
+            <dl class="product-modal__meta product-modal__meta--compact">
+                <div>
+                    <dt>Disponibilidade</dt>
+                    <dd id="product-modal-availability"></dd>
+                </div>
+            </dl>
+            <a id="product-modal-contact" class="button button-primary product-modal__contact" target="_blank"
+                rel="noopener">
+                Entrar em contato pelo WhatsApp
+            </a>
+            <button class="button button-primary" id="product-modal-details-toggle" type="button" aria-expanded="false"
+                aria-controls="product-modal-details">
+                Mais detalhes
+            </button>
+            <div class="product-modal__details" id="product-modal-details" hidden>
+                <p id="product-modal-description"></p>
+                <dl class="product-modal__meta">
+                    <div>
+                        <dt>Categoria</dt>
+                        <dd id="product-modal-category-detail"></dd>
+                    </div>
+                    <div>
+                        <dt>Produção</dt>
+                        <dd>Feito à mão</dd>
+                    </div>
+                </dl>
+            </div>
+        </aside>
+    </dialog>
 
-    <script src="./js/main.js"></script>
-
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
