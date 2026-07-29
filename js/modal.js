@@ -33,6 +33,10 @@ function setActiveThumb(activeButton) {
 }
 
 function selectImage(src, alt, activeButton) {
+    if (!elements.image) {
+        console.error("Elemento #product-modal-image não encontrado");
+        return;
+    }
     elements.image.src = src;
     elements.image.alt = alt;
 
@@ -67,9 +71,11 @@ function renderGallery(product) {
     const firstImage = gallery[0] || fallbackImages.primary;
 
     selectImage(firstImage, product.name);
-    elements.image.onerror = () => {
-        elements.image.src = fallbackImages.primary;
-    };
+    if (elements.image) {
+        elements.image.onerror = () => {
+            elements.image.src = fallbackImages.primary;
+        };
+    }
     elements.thumbs.replaceChildren(...gallery.map((src, index) => createThumb(src, product, index)));
 }
 
@@ -98,6 +104,11 @@ function toggleDetails() {
 }
 
 export function openProductModal(product) {
+    if (!elements || !elements.image || !elements.thumbs || !elements.category) {
+        console.error("Elementos do modal não foram inicializados corretamente.");
+        return;
+    }
+
     collapseDetails();
     renderGallery(product);
 
@@ -120,6 +131,11 @@ export function initProductModal() {
     elements = Object.fromEntries(
         Object.entries(selectors).map(([key, selector]) => [key, document.querySelector(selector)])
     );
+
+    if (!elements.modal || !elements.close || !elements.image) {
+        console.error("Modal não pôde ser inicializado: elementos faltando.");
+        return;
+    }
 
     elements.close.addEventListener("click", () => elements.modal.close());
     elements.detailsToggle.addEventListener("click", toggleDetails);

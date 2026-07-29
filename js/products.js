@@ -14,7 +14,7 @@ const state = {
 let elements;
 
 function getProductById(productId) {
-    return products.find((product) => product.id === productId);
+    return products.find((product) => String(product.id) === String(productId));
 }
 
 function getSearchableContent(product) {
