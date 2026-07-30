@@ -188,10 +188,17 @@
         </div>
     </footer>
 
+    
     <dialog class="product-modal" id="product-modal" aria-labelledby="product-modal-title">
         <button class="modal-close" type="button" aria-label="Fechar detalhes">×</button>
         <div class="product-modal__gallery" id="product-modal-gallery" aria-label="Galeria do produto">
-            <img id="product-modal-image" src="" alt="" class="product-modal__image">
+            <div class="product-modal__media">
+                <img id="product-modal-image" src="" alt="" class="product-modal__image">
+            </div>
+            <button class="modal-nav modal-nav--prev" id="modal-prev" type="button"
+                aria-label="Imagem anterior">‹</button>
+            <button class="modal-nav modal-nav--next" id="modal-next" type="button"
+                aria-label="Próxima imagem">›</button>
             <div class="product-modal__thumbs" id="product-modal-thumbs"></div>
         </div>
         <aside class="product-modal__content">
@@ -205,7 +212,7 @@
                     <dd id="product-modal-availability"></dd>
                 </div>
             </dl>
-            <a id="product-modal-contact" class="button button-primary product-modal__contact" target="_blank"
+            <a href= "https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."id="product-modal-contact" class="button button-primary product-modal__contact" target="_blank"
                 rel="noopener">
                 Entrar em contato pelo WhatsApp
             </a>

@@ -12,10 +12,15 @@ const selectors = {
     details: "#product-modal-details",
     description: "#product-modal-description",
     availability: "#product-modal-availability",
-    price: "#product-modal-price"
+    price: "#product-modal-price",
+    prevButton: "#modal-prev",
+    nextButton: "#modal-next"
 };
 
 let elements;
+let currentProduct = null;
+let currentGallery = [];
+let currentImageIndex = 0;
 
 function getGallery(product) {
     return [...new Set([
@@ -61,22 +66,52 @@ function createThumb(src, product, index) {
     }, { once: true });
 
     button.append(image);
-    button.addEventListener("click", () => selectImage(src, product.name, button));
+    button.addEventListener("click", () => goToImage(index));
 
     return button;
 }
 
-function renderGallery(product) {
-    const gallery = getGallery(product);
-    const firstImage = gallery[0] || fallbackImages.primary;
+function goToImage(index) {
+    if (!currentGallery.length || !currentProduct) return;
 
-    selectImage(firstImage, product.name);
+    if (index < 0) index = currentGallery.length - 1;
+    if (index >= currentGallery.length) index = 0;
+    currentImageIndex = index;
+
+    const src = currentGallery[index];
+    selectImage(src, currentProduct.name);
+
+    const thumbButtons = elements.thumbs.querySelectorAll(".product-modal__thumb");
+    thumbButtons.forEach((btn, i) => {
+        const isActive = i === index;
+        btn.classList.toggle("is-active", isActive);
+        btn.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+}
+
+function nextImage() {
+    goToImage(currentImageIndex + 1);
+}
+
+function prevImage() {
+    goToImage(currentImageIndex - 1);
+}
+
+function renderGallery(product) {
+    currentGallery = getGallery(product);
+    currentProduct = product;
+    currentImageIndex = 0;
+
+    const thumbElements = currentGallery.map((src, index) => createThumb(src, product, index));
+    elements.thumbs.replaceChildren(...thumbElements);
+
+    goToImage(0);
+
     if (elements.image) {
         elements.image.onerror = () => {
             elements.image.src = fallbackImages.primary;
         };
     }
-    elements.thumbs.replaceChildren(...gallery.map((src, index) => createThumb(src, product, index)));
 }
 
 function collapseDetails() {
@@ -138,6 +173,14 @@ export function initProductModal() {
     }
 
     elements.close.addEventListener("click", () => elements.modal.close());
+
+    if (elements.prevButton) {
+        elements.prevButton.addEventListener("click", prevImage);
+    }
+    if (elements.nextButton) {
+        elements.nextButton.addEventListener("click", nextImage);
+    }
+
     elements.detailsToggle.addEventListener("click", toggleDetails);
 
     elements.modal.addEventListener("click", (event) => {
