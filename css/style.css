@@ -1,20 +1,16 @@
 /* BASE */
-
 @import url("./base/reset.css");
 @import url("./base/variables.css");
 @import url("./base/typography.css");
 @import url("./base/global.css");
 
-
 /* COMPONENTES */
-
 @import url("./components/container.css");
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
-
+@import url("./components/cart.css");
 
 /* LAYOUT */
-
 @import url("./layout/header.css");
 @import url("./layout/hero.css");
 @import url("./layout/about.css");
