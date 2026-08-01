@@ -37,7 +37,13 @@
                 </ul>
             </nav>
 
-            <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20conhecer%20as%20peças%20da%20Criffi."
+            <!-- Ícone do carrinho com badge -->
+            <button class="cart-toggle" type="button" aria-label="Abrir carrinho">
+                🛒
+                <span class="cart-badge" aria-hidden="true"></span>
+            </button>
+
+            <a href="https://wa.me/558196303836?text=Olá!%20Gostaria%20de%20conhecer%20as%20peças%20da%20Criffi."
                 class="button button-primary header-contact" target="_blank" rel="noopener">
                 WhatsApp
             </a>
@@ -164,7 +170,7 @@
                 <p>
                     Tire suas dúvidas, solicite informações ou faça seu pedido diretamente pelo WhatsApp.
                 </p>
-                <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."
+                <a href="https://wa.me/558196303836?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."
                     class="button button-primary" target="_blank" rel="noopener">
                     Conversar no WhatsApp
                 </a>
@@ -188,7 +194,7 @@
         </div>
     </footer>
 
-    
+    <!-- ===== MODAL DO PRODUTO (modificado com seção de quantidade) ===== -->
     <dialog class="product-modal" id="product-modal" aria-labelledby="product-modal-title">
         <button class="modal-close" type="button" aria-label="Fechar detalhes">×</button>
         <div class="product-modal__gallery" id="product-modal-gallery" aria-label="Galeria do produto">
@@ -206,16 +212,43 @@
             <h2 id="product-modal-title"></h2>
             <strong id="product-modal-price" class="product-modal__price"></strong>
             <p id="product-modal-summary"></p>
+
+            <!-- Tamanhos -->
+            <div class="product-modal__sizes" id="product-modal-sizes"></div>
+
+            <!-- Personalização -->
+            <div class="product-modal__customization" id="product-modal-customization"></div>
+
+            <!-- ===== NOVO: Bloco de quantidade ===== -->
+            <div class="product-modal__quantity" id="product-modal-quantity">
+                <span class="product-modal__quantity-label">Quantidade:</span>
+                <div class="product-modal__quantity-controls">
+                    <button type="button" class="product-modal__qty-btn" id="product-modal-qty-decr"
+                        aria-label="Diminuir quantidade">−</button>
+                    <span id="product-modal-qty-value" class="product-modal__qty-value">1</span>
+                    <button type="button" class="product-modal__qty-btn" id="product-modal-qty-incr"
+                        aria-label="Aumentar quantidade">+</button>
+                </div>
+            </div>
+
+            <!-- Botão Adicionar ao Carrinho -->
+            <button id="product-modal-add-to-cart" class="button button-primary product-modal__add-cart">
+                Adicionar ao carrinho
+            </button>
+
             <dl class="product-modal__meta product-modal__meta--compact">
                 <div>
                     <dt>Disponibilidade</dt>
                     <dd id="product-modal-availability"></dd>
                 </div>
             </dl>
-            <a href= "https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."id="product-modal-contact" class="button button-primary product-modal__contact" target="_blank"
+
+            <a href="https://wa.me/558196303836?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Criffi."
+                id="product-modal-contact" class="button button-primary product-modal__contact" target="_blank"
                 rel="noopener">
                 Entrar em contato pelo WhatsApp
             </a>
+
             <button class="button button-primary" id="product-modal-details-toggle" type="button" aria-expanded="false"
                 aria-controls="product-modal-details">
                 Mais detalhes
@@ -234,6 +267,41 @@
                 </dl>
             </div>
         </aside>
+    </dialog>
+
+    <!-- ===== PAINEL DO CARRINHO ===== -->
+    <dialog id="cart-panel" class="cart-panel" aria-label="Carrinho de compras">
+        <div class="cart-panel__header">
+            <h2>Seu Carrinho</h2>
+            <button class="cart-close" type="button" aria-label="Fechar carrinho">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <span class="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="cart-row">
+                <span>Frete</span>
+                <span class="cart-shipping">R$ 0,00</span>
+            </div>
+            <div class="cart-row cart-row--total">
+                <span>Total</span>
+                <span class="cart-total">R$ 0,00</span>
+            </div>
+            <div class="cart-region">
+                <label for="cart-region">Região para frete</label>
+                <select id="cart-region">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="outros">Outras regiões</option>
+                </select>
+            </div>
+            <button class="button button-primary cart-checkout-btn" type="button">
+                Finalizar pedido
+            </button>
+        </div>
     </dialog>
 
     <script type="module" src="./js/main.js"></script>
